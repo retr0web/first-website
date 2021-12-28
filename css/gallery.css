@@ -3,7 +3,7 @@
     min-height: 80vh; 
     margin: 0 auto;
     padding-top: 25px;
-    padding-bottom: 35px;
+    padding-bottom: 120px;
 }
 
 .grid {
@@ -21,6 +21,11 @@
     height: 100%;
     border-radius: 8px;
     object-fit: cover;
+    transition: 0.8s;
+}
+
+.grid img:hover {
+    transform: scale(1.2);
 }
 
 .span-col-4 {
