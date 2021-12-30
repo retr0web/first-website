@@ -37,6 +37,7 @@
 .grid-area div p {
     text-align: center;
     font-size: 1.9em;
+    max-width: 35ch;
 }
 
 @media (max-width: 600px) {

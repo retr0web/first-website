@@ -28,11 +28,15 @@
     transform: scale(1.2);
 }
 
-.span-col-4 {
-    grid-column: span 4;
+@media (min-width: 60em){
+    .span-col-4 {
+        grid-column: span 4;
+    }
+    
+    .span-2 {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
 }
 
-.span-2 {
-    grid-column: span 2;
-    grid-row: span 2;
-}
+

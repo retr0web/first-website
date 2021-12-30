@@ -34,12 +34,23 @@ html, body {
     align-items: center;
 }
 
+/* justify-content will change depending on viewport */
+.right-to-center {
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .gap {
     gap: 10px;
 }
 
 .column {
     flex-flow: column wrap;
+}
+
+.rotate {
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .main-space {
@@ -85,19 +96,19 @@ html, body {
 .side-content {
     background: var(--text);
     width: 40%;
-    height: 80vh;
+    min-height: 87vh;
 }
 
 .side-content img {
     width: 80%;
     height: 60vh;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .main-section {
     background: var(--secondary-yellow);
     width: 60%;
-    height: 80vh;
+    min-height: 87vh;
 }
 
 .main-section h1 {
@@ -109,15 +120,16 @@ html, body {
 .main-section p {
     font-size: 1.9em;
     color: var(--main-chocolate);
+    text-align: center;
 }
 
 .main-footer {
     background: var(--main-chocolate);
     width: 100%;
-    min-height: 100px;
-    position: fixed;
+    height: 100px;
+    /*position: fixed;
     bottom: 0;
-    left:0;
+    left:0;*/
 }
 
 .main-footer p{
@@ -158,4 +170,28 @@ html, body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #b39132;
+}
+
+@media (max-width: 600px){
+    .right-to-center{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 630px) {
+    .rotate {
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+    }
+
+    .side-content {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-section {
+        width: 100%;
+        height: auto;
+    }
 }
